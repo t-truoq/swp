@@ -10,10 +10,8 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface BookingMapper {
 
-    BookingMapper INSTANCE = Mappers.getMapper(BookingMapper.class);
-
-    @Mapping(source = "customer.email", target = "customerId")
-    @Mapping(source = "specialist.email", target = "specialistId")
+    @Mapping(source = "customer.userId", target = "customerId")
+    @Mapping(source = "specialist.userId", target = "specialistId")
     BookingResponse toResponse(Booking booking);
 
     @Mapping(target = "customer", ignore = true)

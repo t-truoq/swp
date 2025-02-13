@@ -18,10 +18,6 @@ public class BookingRequest {
 
     @NotNull(message = "Booking date is required")
     private LocalDateTime bookingDate;
-
     private String timeSlot;
-    private BookingStatus status;
-    private LocalDateTime checkInTime;
-    private LocalDateTime checkOutTime;
     private BigDecimal totalPrice;
 }
