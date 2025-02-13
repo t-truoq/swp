@@ -24,5 +24,5 @@ public class UserCreationRequest {
     String name;
     String phone;
     String address;
-    Role role;
+
 }

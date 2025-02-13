@@ -17,6 +17,9 @@ import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -46,7 +49,7 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(request.getPassword()));
 
         // Gán role mặc định
-        user.setRole(request.getRole() != null ? request.getRole() : Role.CUSTOMER);
+        user.setRole(Role.CUSTOMER);
         // Set thời gian tạo/cập nhật
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());

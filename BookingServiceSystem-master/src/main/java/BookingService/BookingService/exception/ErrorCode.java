@@ -6,6 +6,7 @@ public enum ErrorCode {
     INVALID_EMAIL(1003,"Email is invalid"),
     PASSWORD_INVALID(1004, "Password must be at least 4 characters"),
     USER_NOT_EXISTED(1005, "User not existed"),
+    SERVICE_NOT_EXISTED(10012, "Service not existed"),
     BOOKING_NOT_EXISTED(1011, "Booking not existed"),
     UNAUTHENTICATED(1006, "Unauthenticated"),
     INVALID_KEY(1001, "Invalid message key"),
